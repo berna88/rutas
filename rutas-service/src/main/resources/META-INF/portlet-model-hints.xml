@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="mx.com.cuervo.rutas.model.Parada">
+		<field name="paradaId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="nombreParada" type="String" />
+		<field name="descripcion" type="String" />
+		<field name="horario" type="String" />
+		<field name="rutaId" type="long" />
+		<field name="nombreCarpeta" type="String" />
+		<field name="nombreArchivo" type="String" />
+	</model>
+	<model name="mx.com.cuervo.rutas.model.Ruta">
+		<field name="uuid" type="String" />
+		<field name="rutaId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="nombreRuta" type="String" />
+		<field name="capacidad" type="long" />
+		<field name="disponibilidad" type="long" />
+	</model>
+	<model name="mx.com.cuervo.rutas.model.Usuario">
+		<field name="usuarioId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="empleadoId" type="long" />
+		<field name="telefono" type="String" />
+		<field name="rutaId" type="long" />
+		<field name="paradaId" type="long" />
+		<field name="fecha" type="Date" />
+	</model>
+</model-hints>

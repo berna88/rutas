@@ -1,0 +1,10 @@
+Bundle-Name: rutas-api
+Bundle-SymbolicName: mx.com.cuervo.rutas.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	mx.com.cuervo.rutas.exception,\
+	mx.com.cuervo.rutas.model,\
+	mx.com.cuervo.rutas.service,\
+	mx.com.cuervo.rutas.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rutas-service/service.xml

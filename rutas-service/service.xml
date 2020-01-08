@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="mx.com.cuervo.rutas">
+	<namespace>C</namespace>
+	<entity local-service="true" name="Ruta" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="rutaId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="nombreRuta" type="String"></column>
+        <column name="capacidad" type="long"></column>
+        <column name="disponibilidad" type="long"></column>
+        
+        	<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+
+        
+	</entity>
+	<entity name="Parada" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="paradaId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="nombreParada" type="String"></column>
+        <column name="descripcion" type="String"></column>
+        <column name="horario" type="String"></column>
+        <column name="rutaId" type="long"></column>
+        <column name="nombreCarpeta" type="String"></column>
+        <column name="nombreArchivo" type="String"></column>
+        <finder name="G_R" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+            <finder-column name="rutaId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="Usuario" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="usuarioId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="empleadoId" type="long"></column>
+        <column name="telefono" type="String"></column>
+        <column name="rutaId" type="long"></column>
+        <column name="paradaId" type="long"></column>
+        <column name="fecha" type="Date"></column>
+        <finder name="G_R" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+            <finder-column name="rutaId"></finder-column>
+        </finder>
+	</entity>
+</service-builder>
